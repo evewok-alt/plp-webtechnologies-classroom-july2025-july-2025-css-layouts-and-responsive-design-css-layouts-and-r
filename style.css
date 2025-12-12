@@ -1,0 +1,113 @@
+body{
+	background-color: #FFF0F5;
+  display: grid;
+  grid-template-columns: 1fr min(1000px, 90%) 1fr;
+ }
+
+body>*{
+  grid-column: 2;
+}
+
+section{
+  background-color: #F1DDCF;
+	padding: 10px ;
+	margin: 5px;
+	border-radius: 5px;
+ }
+
+header{
+	color: black;
+	font-family: 'arial', sans-serif;
+	text-align: center;
+}
+
+section{
+  box-shadow: 0px 0px 6px rgba(0,0,0,0.2);
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  gap: 12px;
+  margin-top: 30px;
+  }
+
+input{
+  border: 1px solid #888;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+button{
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #F2BDCD;
+  padding: 10px;
+  font-weight: bold;
+}
+
+button:hover{
+  background-color: #F77FBE;
+}
+
+footer{
+  text-align: center;
+  font-weight: bold;
+}
+
+
+@media (max-width: 1024px) {
+  body {
+    grid-template-columns: 1fr min(90%, 800px) 1fr;
+  }
+
+  section {
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  form {
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    grid-template-columns: 1fr 95% 1fr;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  section {
+    width: 95%;
+    padding: 15px;
+  }
+
+  form {
+    max-width: 100%;
+  }
+
+  input, button {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 400px) {
+  header h1 {
+    font-size: 1.2rem;
+  }
+
+  header p {
+    font-size: 0.9rem;
+  }
+
+  button {
+    padding: 6px;
+    font-size: 0.85rem;
+  }
+}
